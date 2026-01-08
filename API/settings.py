@@ -26,14 +26,6 @@ SECRET_KEY = 'django-insecure-n@6z(u3vj(#9-zqbn-q2=mt6w@c)gt94@ydqrstbh-+y-80d9^
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = [
-    'seusuario.pythonanywhere.com',
-    'localhost',
-    '127.0.0.1',
-]
-
-# Se quiser aceitar qualquer subdomínio pythonanywhere:
-ALLOWED_HOSTS = ['.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -129,5 +121,8 @@ LOGOUT_REDIRECT_URL = '/login/'
 
 
 STATIC_URL = 'static/'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 
