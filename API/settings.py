@@ -113,6 +113,4 @@ LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 # CORS (liberado geral só para estudo)
 CORS_ALLOW_ALL_ORIGINS = True
-
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
