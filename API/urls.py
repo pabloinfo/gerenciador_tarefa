@@ -20,9 +20,17 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('core.urls')), # Inclui as URLs do seu app
-    # Recomendo adicionar login URLs para o @login_required funcionar
+
+    # Login usando template customizado
+    path(
+        "accounts/login/",
+        auth_views.LoginView.as_view(template_name="core/login.html"),
+        name="login"
+    ),
+
+    # Rotas padrão de autenticação (logout, reset, etc.)
     path('accounts/', include('django.contrib.auth.urls')),
-    path("login/", auth_views.LoginView.as_view(), name="login"),
-    path("logout/", auth_views.LogoutView.as_view(), name="logout"),
+
+    # Rotas do app core
+    path('', include('core.urls')),
 ]
